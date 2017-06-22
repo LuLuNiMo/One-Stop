@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.coin.student_menu">
+
+    <RelativeLayout
+        android:layout_width="356dp"
+        android:layout_height="532dp"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="4dp">
+
+        <Button
+            android:id="@+id/stu_job"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginBottom="49dp"
+            android:layout_marginStart="36dp"
+            android:background="@android:drawable/ic_dialog_dialer"
+            android:backgroundTint="@color/colorAccent"
+            android:text="職缺"
+            android:textSize="24sp"
+            android:layout_above="@+id/stu_person"
+            android:layout_alignStart="@+id/linearLayout2" />
+
+        <Button
+            android:id="@+id/stu_person"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_above="@+id/button22"
+            android:layout_alignStart="@+id/button21"
+            android:layout_marginBottom="39dp"
+            android:background="@android:drawable/btn_radio"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:text="個人"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button19"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_alignBottom="@+id/button22"
+            android:layout_alignStart="@+id/stu_person"
+            android:layout_marginBottom="13dp"
+            android:background="@android:drawable/btn_star_big_on"
+            android:text="群組"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button21"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/linearLayout2"
+            android:layout_marginEnd="39dp"
+            android:background="@android:drawable/ic_dialog_alert"
+            android:backgroundTint="#FFFFDCF4"
+            android:text="人氣評價"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button22"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginBottom="50dp"
+            android:background="@android:drawable/stat_notify_chat"
+            android:backgroundTint="#FFF6F7AA"
+            android:text="即時通訊"
+            android:textSize="24sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/stu_job" />
+
+        <LinearLayout
+            android:layout_width="352dp"
+            android:layout_height="81dp"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="31dp"
+            tools:layout_editor_absoluteY="60dp"
+            android:layout_marginBottom="18dp"
+            android:layout_above="@+id/stu_job"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="15dp"
+            android:id="@+id/linearLayout2">
+
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <SearchView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.16" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/stu_map"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_alignEnd="@+id/button22"
+            android:layout_alignTop="@+id/stu_person"
+            android:background="@android:drawable/ic_dialog_map"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:text="地圖"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.coin.landlord_login">
+
+    <RelativeLayout
+        android:layout_width="338dp"
+        android:layout_height="492dp"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="9dp">
+
+        <EditText
+            android:id="@+id/editText8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="2dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignEnd="@+id/checkBox"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓名："
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="16dp"
+            android:layout_alignBaseline="@+id/editText8"
+            android:layout_alignBottom="@+id/editText8"
+            android:layout_toStartOf="@+id/editText8"
+            android:layout_marginEnd="15dp" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="店名："
+            android:textSize="18sp"
+            android:layout_alignBaseline="@+id/editText9"
+            android:layout_alignBottom="@+id/editText9"
+            android:layout_alignStart="@+id/textView17" />
+
+        <EditText
+            android:id="@+id/editText9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editText8"
+            android:layout_below="@+id/editText8"
+            android:layout_marginTop="11dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地址："
+            android:textSize="18sp"
+            android:layout_alignBaseline="@+id/editText16"
+            android:layout_alignBottom="@+id/editText16"
+            android:layout_alignStart="@+id/textView18" />
+
+        <EditText
+            android:id="@+id/editText16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editText9"
+            android:layout_below="@+id/editText9"
+            android:layout_marginTop="17dp"
+            android:ems="10"
+            android:inputType="textPostalAddress" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="電話："
+            android:textSize="18sp"
+            android:layout_alignBaseline="@+id/editText17"
+            android:layout_alignBottom="@+id/editText17"
+            android:layout_alignStart="@+id/textView19" />
+
+        <EditText
+            android:id="@+id/editText17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editText16"
+            android:layout_below="@+id/editText16"
+            android:layout_marginTop="27dp"
+            android:ems="10"
+            android:inputType="phone" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="E-mail："
+            android:textSize="18sp"
+            android:layout_below="@+id/editText17"
+            android:layout_alignStart="@+id/textView20" />
+
+        <EditText
+            android:id="@+id/editText18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:layout_alignBaseline="@+id/textView21"
+            android:layout_alignBottom="@+id/textView21"
+            android:layout_alignStart="@+id/editText17" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="條款："
+            android:textSize="18sp"
+            android:layout_below="@+id/editText18"
+            android:layout_alignStart="@+id/textView21" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="false"
+            android:soundEffectsEnabled="false"
+            android:text="XXXXXXXX......."
+            android:layout_alignTop="@+id/textView23"
+            android:layout_toEndOf="@+id/textView21" />
+
+        <Button
+            android:id="@+id/center"
+            style="@android:style/Widget.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="確定"
+            android:textSize="14sp"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/textView23" />
+
+        <Button
+            android:id="@+id/button13"
+            style="@android:style/Widget.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:text="重填"
+            android:layout_alignParentBottom="true"
+            android:layout_alignEnd="@+id/editText18" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            style="@android:style/Widget.CompoundButton.CheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/button13"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="14dp"
+            android:checked="false"
+            android:text="我接受"
+            android:textSize="8sp" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

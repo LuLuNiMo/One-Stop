@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.coin.landlord_personal">
+
+    <RelativeLayout
+        android:layout_width="344dp"
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="22dp"
+            android:background="@android:drawable/ic_delete"
+            android:text="已拒絕職缺"
+            android:textSize="18sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/button9" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_below="@+id/button8"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="49dp"
+            android:background="?android:attr/listChoiceIndicatorSingle"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:text="已接收職缺"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_below="@+id/button9"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="44dp"
+            android:background="@android:drawable/ic_dialog_alert"
+            android:backgroundTint="#0000FF"
+            android:text="職缺通知"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
