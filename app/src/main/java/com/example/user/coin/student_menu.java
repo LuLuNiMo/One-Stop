@@ -7,7 +7,13 @@ import android.content.Intent;
 import android.view.View;
 
 public class student_menu extends AppCompatActivity {
-    private Button button;
+    Button job;
+    Button map;
+    Button casejob;
+    Button group;
+    Button person;
+    Button eva;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,9 +21,8 @@ public class student_menu extends AppCompatActivity {
         setContentView(R.layout.activity_student_menu);
         setTitle("學生_主畫面");
 
-        button = (Button)findViewById(R.id.stu_job);
-        Button nextpagebtn = (Button)findViewById(R.id.stu_job);
-        nextpagebtn.setOnClickListener(new View.OnClickListener(){
+        job = (Button)findViewById(R.id.stu1);
+        job.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent intent = new Intent();
                 intent.setClass(student_menu.this ,all_jobs.class);
@@ -25,9 +30,36 @@ public class student_menu extends AppCompatActivity {
             }
         });
 
-        button = (Button)findViewById(R.id.stu_person);
-         nextpagebtn = (Button)findViewById(R.id.stu_person);
-        nextpagebtn.setOnClickListener(new View.OnClickListener(){
+        map = (Button)findViewById(R.id.stu2);
+        map.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intent = new Intent();
+                intent.setClass(student_menu.this ,MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        casejob = (Button)findViewById(R.id.stu3);
+       casejob.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intent = new Intent();
+                intent.setClass(student_menu.this ,student_case.class);
+                startActivity(intent);
+            }
+        });
+
+       group = (Button)findViewById(R.id.stu4);
+        group.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intent = new Intent();
+                intent.setClass(student_menu.this ,student_group.class);
+                startActivity(intent);
+            }
+        });
+
+
+        person = (Button)findViewById(R.id.stu5);
+        person.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent intent = new Intent();
                 intent.setClass(student_menu.this ,student_personal.class);
@@ -35,15 +67,9 @@ public class student_menu extends AppCompatActivity {
             }
         });
 
-        button = (Button)findViewById(R.id.stu_map);
-        nextpagebtn = (Button)findViewById(R.id.stu_map);
-        nextpagebtn.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent();
-                intent.setClass(student_menu.this ,MapsActivity.class);
-                startActivity(intent);
-            }
-        });
+
+
+
 
 
     }

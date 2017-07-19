@@ -5,119 +5,44 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     tools:context="com.example.user.coin.all_jobs">
+    <LinearLayout
+        android:layout_width="344dp"
+        android:layout_height="495dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
 
-    <RelativeLayout
-        android:layout_width="350dp"
-        android:layout_height="503dp"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="2dp">
-
-        <Button
-            android:id="@+id/button7"
-            style="@android:style/Widget.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="14dp"
-            android:text="篩選"
-            android:textSize="24sp"
-            tools:layout_editor_absoluteX="270dp"
-            tools:layout_editor_absoluteY="16dp" />
-
-        <Button
-            android:id="@+id/button12"
-            style="@android:style/Widget.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/linearLayout"
-            android:layout_marginEnd="10dp"
-            android:layout_toStartOf="@+id/button7"
-            android:text="課表"
-            android:textSize="24sp"
-            tools:layout_editor_absoluteX="169dp"
-            tools:layout_editor_absoluteY="16dp" />
-
-        <SearchView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/linearLayout"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="22dp" />
-
-        <LinearLayout
-            android:id="@+id/linearLayout"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/button7"
-            android:orientation="vertical"
-            android:weightSum="1">
+            android:layout_height="61dp">
 
-            <EditText
-                android:id="@+id/editText10"
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/stuclass"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="職缺1"
-                android:textSize="24sp" />
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/stu_eva_icon1" />
 
-            <EditText
-                android:id="@+id/editText11"
-                android:layout_width="match_parent"
+            <SearchView
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/stuclass"
+                android:id="@+id/searchView2" />
+
+            <Button
+                android:id="@+id/button24"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="職缺2"
-                android:textSize="24sp" />
+                android:layout_alignBaseline="@+id/stuclass"
+                android:layout_alignBottom="@+id/stuclass"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="17dp"
+                android:text="分類"
+                android:textSize="18sp" />
 
-            <EditText
-                android:id="@+id/editText12"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="職缺3"
-                android:textSize="24sp" />
+        </RelativeLayout>
 
-            <EditText
-                android:id="@+id/editText13"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="職缺4"
-                android:textSize="24sp" />
-
-            <EditText
-                android:id="@+id/editText14"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="職缺5"
-                android:textSize="24sp" />
-
-            <EditText
-                android:id="@+id/editText15"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="職缺6"
-                android:textSize="24sp" />
-
-            <EditText
-                android:id="@+id/editText23"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="職缺7"
-                android:textSize="24sp" />
-
-        </LinearLayout>
-
-    </RelativeLayout>
-
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

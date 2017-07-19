@@ -8,24 +8,23 @@ import android.widget.*;
 
 public class student_login extends AppCompatActivity {
 
-    private Button button;
+    private Button enter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_login);
-        setTitle("註冊_學生");
+        setTitle("註冊");
 
+        enter = (Button)findViewById(R.id.stulog_enter);
 
-        button = (Button)findViewById(R.id.center);
-        Button nextpagebtn = (Button)findViewById(R.id.center);
-        nextpagebtn.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent();
-                intent.setClass(student_login.this ,student_menu.class);
-                startActivity(intent);
-            }
-        });
+       enter.setOnClickListener(new View.OnClickListener(){
+           public void onClick(View view){
+               Intent intent = new Intent();
+               intent.setClass(student_login.this ,student_menu.class);
+               startActivity(intent);
+           }
+       });
 
 
 

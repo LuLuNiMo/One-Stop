@@ -6,201 +6,353 @@
     android:layout_height="match_parent"
     tools:context="com.example.user.coin.student_login">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="344dp"
         android:layout_height="495dp"
-        tools:layout_editor_absoluteX="8dp"
+        android:fillViewport="true"
+        tools:layout_editor_absoluteX="7dp"
         tools:layout_editor_absoluteY="8dp">
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="姓名："
-            android:textSize="18sp"
-            android:layout_above="@+id/textView4"
-            android:layout_alignParentStart="true" />
+            android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/editText3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:layout_alignParentTop="true"
-            android:layout_alignEnd="@+id/checkBox2"
-            android:layout_marginEnd="13dp"
-            android:layout_marginTop="12dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/textView3"
-            android:layout_below="@+id/editText3"
-            android:layout_marginTop="23dp"
-            android:text="學號："
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="會員帳號："
+                    android:textAlignment="viewStart"
+                    android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/editText6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:layout_alignBaseline="@+id/textView4"
-            android:layout_alignBottom="@+id/textView4"
-            android:layout_alignStart="@+id/editText7" />
+                <EditText
+                    android:id="@+id/e1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="帳號需英文開頭"
+                    android:inputType="textPersonName" />
 
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            android:text="年齡："
-            android:textSize="18sp"
-            android:layout_below="@+id/editText6"
-            android:layout_alignStart="@+id/textView4" />
+            </LinearLayout>
 
-        <EditText
-            android:id="@+id/editText7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="numberSigned"
-            android:layout_alignBaseline="@+id/textView10"
-            android:layout_alignBottom="@+id/textView10"
-            android:layout_alignStart="@+id/editText3" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/textView10"
-            android:layout_below="@+id/editText7"
-            android:layout_marginTop="18dp"
-            android:text="性別："
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="密碼："
+                    android:textAlignment="viewStart"
+                    android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/editText19"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:layout_alignBaseline="@+id/textView11"
-            android:layout_alignBottom="@+id/textView11"
-            android:layout_alignStart="@+id/editText7" />
+                <EditText
+                    android:id="@+id/e2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPassword" />
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/textView11"
-            android:layout_below="@+id/editText19"
-            android:layout_marginTop="20dp"
-            android:text="科系："
-            android:textSize="18sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/editText20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:layout_alignBaseline="@+id/textView12"
-            android:layout_alignBottom="@+id/textView12"
-            android:layout_alignStart="@+id/editText21" />
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="確認密碼："
+                    android:textAlignment="viewStart"
+                    android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/textView12"
-            android:layout_below="@+id/editText20"
-            android:layout_marginTop="16dp"
-            android:text="專長："
-            android:textSize="18sp" />
+                <AutoCompleteTextView
+                    android:id="@+id/com_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="87.07"
+                    android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/editText21"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/editText19"
-            android:layout_below="@+id/editText20"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:inputType="textPersonName" />
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="信箱："
-            android:textSize="18sp"
-            android:layout_alignBaseline="@+id/editText22"
-            android:layout_alignBottom="@+id/editText22"
-            android:layout_alignStart="@+id/textView13" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/editText22"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textEmailAddress"
-            android:layout_below="@+id/editText21"
-            android:layout_alignStart="@+id/editText21" />
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:drawable/bottom_bar"
+                    app:srcCompat="@android:drawable/editbox_dropdown_dark_frame" />
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/textView14"
-            android:layout_below="@+id/editText22"
-            android:layout_marginTop="15dp"
-            android:text="條款："
-            android:textSize="18sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="XXXXXX...."
-            android:layout_marginStart="60dp"
-            android:layout_alignBottom="@+id/textView15"
-            android:layout_toEndOf="@+id/textView15" />
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="姓名："
+                    android:textAlignment="viewStart"
+                    android:textSize="18sp" />
 
-        <CheckBox
-            android:id="@+id/checkBox2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="我接受"
-            android:textSize="8sp"
-            android:layout_above="@+id/button14"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="18dp"
-            android:layout_marginBottom="9dp" />
+                <EditText
+                    android:id="@+id/e4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="請輸入真實姓名"
+                    android:inputType="textPersonName" />
 
-        <Button
-            android:id="@+id/center"
-            style="@android:style/Widget.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_toEndOf="@+id/textView15"
-            android:text="確認"
-            android:textSize="18sp" />
+            </LinearLayout>
 
-        <Button
-            android:id="@+id/button14"
-            style="@android:style/Widget.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/checkBox2"
-            android:text="重填"
-            android:textSize="18sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="學校："
+                    android:textAlignment="viewStart"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="科系："
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="238dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.97"
+                    android:text="學號："
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editText24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="依照學校學號格式"
+                    android:inputType="textPersonName" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.97"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="性別："
+                    android:textAlignment="viewStart"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:layout_width="209dp"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/sex_woman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="女" />
+
+                    <RadioButton
+                        android:id="@+id/sex_man"
+                        style="@android:style/Widget.DeviceDefault.Light.CompoundButton.RadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="false"
+                        android:text="男" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="84dp"
+                    android:layout_height="wrap_content"
+                    android:text="年齡："
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinner3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="信箱："
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.16"
+                    android:ems="10"
+                    android:hint="範例：abc@yuntech.edu.tw"
+                    android:inputType="textEmailAddress" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="92dp"
+                    android:layout_height="wrap_content"
+                    android:text="專長："
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinner4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.36"
+                    android:text="期望待遇："
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editText6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="62dp"
+                    android:layout_weight="1.01"
+                    android:ems="10"
+                    android:inputType="textMultiLine" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="我同意，One_Stop條款" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/stulog_enter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.17"
+                    android:text="確認"
+                    android:textAlignment="center" />
+
+                <Button
+                    android:id="@+id/stulog_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.19"
+                    android:text="取消" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
 </android.support.constraint.ConstraintLayout>

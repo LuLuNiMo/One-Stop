@@ -8,20 +8,26 @@
     tools:layout_editor_absoluteY="81dp"
     tools:layout_editor_absoluteX="0dp">
 
+
+
+
     <RelativeLayout
-        android:layout_width="364dp"
-        android:layout_height="513dp"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="-1dp">
+        android:layout_width="334dp"
+        android:layout_height="530dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="13dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="-10dp"
+        android:layout_marginEnd="11dp">
 
         <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/title"
-            android:layout_below="@+id/title"
-            android:layout_marginStart="34dp"
-            android:layout_marginTop="75dp"
+            android:layout_above="@+id/pass"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginStart="16dp"
             android:text="帳號："
             android:textSize="24sp" />
 
@@ -29,9 +35,9 @@
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/login"
             android:layout_alignStart="@+id/textView7"
-            android:layout_below="@+id/textView7"
-            android:layout_marginTop="64dp"
+            android:layout_marginBottom="77dp"
             android:text="密碼："
             android:textSize="24sp" />
 
@@ -39,20 +45,31 @@
             android:id="@+id/id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imageView3"
             android:layout_alignTop="@+id/textView7"
-            android:layout_toEndOf="@+id/textView7"
+            android:background="@drawable/tvstyle"
             android:ems="10"
+            android:hint="輸入帳號或電子郵件"
             android:inputType="textPersonName"
+            android:selectAllOnFocus="false"
+            android:singleLine="true"
+            android:textColor="?attr/actionMenuTextColor"
             android:textSize="18sp" />
 
         <EditText
             android:id="@+id/pass"
+            style="@style/Widget.AppCompat.EditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/login"
-            android:layout_toEndOf="@+id/textView8"
+            android:layout_alignBaseline="@+id/textView8"
+            android:layout_alignBottom="@+id/textView8"
+            android:layout_alignStart="@+id/id"
+            android:background="@drawable/tvstyle"
             android:ems="10"
+            android:hint="輸入密碼"
             android:inputType="textPersonName"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
             android:textSize="18sp" />
 
         <Button
@@ -60,37 +77,63 @@
             style="@android:style/Widget.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/fb"
             android:layout_alignStart="@+id/textView8"
-            android:layout_below="@+id/textView8"
-            android:layout_marginStart="34dp"
-            android:layout_marginTop="53dp"
-            android:text="登入"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="43dp"
+            android:text="確認"
             android:textSize="24sp"
             android:typeface="sans" />
 
         <Button
-            android:id="@+id/create_new"
+            android:id="@+id/cancel"
             style="@android:style/Widget.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/fb"
             android:layout_alignEnd="@+id/pass"
-            android:layout_marginEnd="30dp"
-            android:text="註冊"
+            android:layout_alignTop="@+id/login"
+            android:layout_marginEnd="14dp"
+            android:text="取消"
             android:textAlignment="center"
             android:textSize="24sp" />
 
         <Button
             android:id="@+id/fb"
             style="@android:style/Widget.Button.Small"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/register"
+            android:layout_marginBottom="28dp"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/login"
+            android:background="@drawable/fb"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="120dp"
+            android:layout_height="85dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/login"
-            android:layout_below="@+id/login"
-            android:layout_marginStart="31dp"
-            android:layout_marginTop="30dp"
-            android:text="使用FB帳號登入"
-            android:textSize="18sp" />
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/pass"
+            android:layout_marginBottom="41dp"
+            android:text="第一次註冊嗎？請按這裡"
+            android:textAllCaps="false"
+            android:textColor="#0000FF"
+            android:textSize="14sp" />
+
     </RelativeLayout>
+
+
+
+
 
 </android.support.constraint.ConstraintLayout>

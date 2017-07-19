@@ -35,6 +35,7 @@
         <activity android:name=".student_personal" />
         <activity android:name=".landlord_login" />
         <activity android:name=".student_login" />
+        <activity android:name=".login_role" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -49,7 +50,9 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".student_case" />
+        <activity android:name=".student_group"></activity>
     </application>
 
 </manifest>
