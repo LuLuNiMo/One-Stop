@@ -11,6 +11,7 @@
 
 
 
+
     <RelativeLayout
         android:layout_width="334dp"
         android:layout_height="530dp"
@@ -54,14 +55,14 @@
             android:selectAllOnFocus="false"
             android:singleLine="true"
             android:textColor="?attr/actionMenuTextColor"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:layout_alignBottom="@+id/textView7" />
 
         <EditText
             android:id="@+id/pass"
             style="@style/Widget.AppCompat.EditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/textView8"
             android:layout_alignBottom="@+id/textView8"
             android:layout_alignStart="@+id/id"
             android:background="@drawable/tvstyle"
@@ -70,32 +71,33 @@
             android:inputType="textPersonName"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimary"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:layout_alignTop="@+id/textView8" />
 
         <Button
             android:id="@+id/login"
             style="@android:style/Widget.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/fb"
-            android:layout_alignStart="@+id/textView8"
-            android:layout_marginBottom="10dp"
-            android:layout_marginStart="43dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="26dp"
             android:text="確認"
             android:textSize="24sp"
-            android:typeface="sans" />
+            android:typeface="sans"
+            android:layout_above="@+id/fb"
+            android:layout_alignStart="@+id/textView8" />
 
         <Button
             android:id="@+id/cancel"
             style="@android:style/Widget.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/pass"
-            android:layout_alignTop="@+id/login"
-            android:layout_marginEnd="14dp"
             android:text="取消"
             android:textAlignment="center"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:layout_marginStart="15dp"
+            android:layout_alignTop="@+id/login"
+            android:layout_toEndOf="@+id/fb" />
 
         <Button
             android:id="@+id/fb"
@@ -113,22 +115,22 @@
             android:id="@+id/imageView3"
             android:layout_width="120dp"
             android:layout_height="85dp"
+            android:layout_marginTop="34dp"
+            app:srcCompat="@drawable/logo"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="13dp"
-            app:srcCompat="@drawable/logo" />
+            android:layout_centerHorizontal="true" />
 
         <TextView
             android:id="@+id/register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/pass"
-            android:layout_marginBottom="41dp"
+            android:layout_marginBottom="36dp"
             android:text="第一次註冊嗎？請按這裡"
             android:textAllCaps="false"
             android:textColor="#0000FF"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
 
     </RelativeLayout>
 

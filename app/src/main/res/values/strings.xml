@@ -15,4 +15,64 @@
         completions."
     </string>
     <string name="title_activity_maps">Map</string>
+
+    <string-array name="school">
+        <item> 雲林科技大學</item>
+        <item>虎尾科技大學</item>
+        <item>環球科技大</item>
+        <item>高中</item>
+        <item>其他</item>
+
+    </string-array>
+
+    <string-array name="department">
+        <item>資訊管理系</item>
+        <item>企業管理系</item>
+        <item>工業工程設計系</item>
+        <item>財務金融系</item>
+        <item>會計系</item>
+        <item>機械工程系</item>
+        <item>電子工程系</item>
+        <item>電機工程系</item>
+        <item>環境與安全衛生工程系</item>
+        <item>化學工程與材料工程系</item>
+        <item>營建工程系</item>
+        <item>資訊工程系</item>
+        <item>工業設計系</item>
+        <item>視覺傳達設計系</item>
+        <item>數位媒體設計系</item>
+        <item>創意生活設計系</item>
+        <item>建築與室內設計系</item>
+        <item>文化資產維護系</item>
+        <item>應用外語系</item>
+
+    </string-array>
+
+    <string-array name="old">
+        <item>15以下</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25以上</item>
+    </string-array>
+
+    <string-array name="speciality">
+        <item> 基本繪圖軟體操作(EX:AI,photoshop)</item>
+        <item>基本Office操作(EX:word,excel,powerpoint等)</item>
+        <item>基本資料庫操作</item>
+        <item>口條很好</item>
+        <item>善於交際</item>
+        <item>學習速度快</item>
+        <item>其他</item>
+    </string-array>
+
+
+
 </resources>

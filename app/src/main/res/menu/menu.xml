@@ -5,21 +5,10 @@
     tools:context="com.gallery.MainActivity"
     >
 
-    <item android:id="@+id/item1"
-        android:title="One Stop"
-        android:icon="@drawable/logo"
-        app:showAsAction="always" />
-
     <item
-        android:id="@+id/item2"
-        android:title="test"
-        app:showAsAction="never"
-        />
-
-
-
-
-
-
+        android:id="@+id/item1"
+        android:icon="@drawable/logo"
+        android:title="One Stop"
+        app:showAsAction="always" />
 
 </menu>

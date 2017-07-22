@@ -80,6 +80,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+   /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -87,15 +89,12 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-
-
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
         return super.onOptionsItemSelected(item);
     }
-
+*/
 
 
 
@@ -103,24 +102,3 @@ public class MainActivity extends AppCompatActivity {
 }
 
 
- /*   button = (Button)findViewById(R.id.fb);
-       nextpagebtn = (Button)findViewById(R.id.fb);
-        nextpagebtn.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent();
-                intent.setClass(MainActivity.this ,landlord_login.class);
-                startActivity(intent);
-            }
-        });
-
-
-        button = (Button)findViewById(R.id.login);
-        nextpagebtn = (Button)findViewById(R.id.login);
-        nextpagebtn.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent();
-                intent.setClass(MainActivity.this ,student_login.class);
-                startActivity(intent);
-            }
-        });
-*/
