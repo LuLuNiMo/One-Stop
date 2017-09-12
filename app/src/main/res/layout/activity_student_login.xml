@@ -1,387 +1,546 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@android:style/Widget.DeviceDefault.Light.ScrollView"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:fillViewport="true"
     tools:context="com.example.user.coin.student_login">
 
-    <ScrollView
-        style="@android:style/Widget.Holo.Light.ScrollView"
-        android:layout_width="wrap_content"
-        android:layout_height="495dp"
-        android:clipToPadding="false"
-        android:fillViewport="true"
-        android:layout_gravity="center"
-        android:scrollbarStyle="outsideOverlay"
-        tools:layout_editor_absoluteY="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="16dp"
+        android:elevation="1dp"
+        android:orientation="vertical">
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:elevation="1dp"
-            android:orientation="vertical"
-            android:padding="5dp"
-            android:paddingBottom="5dp"
-            android:paddingEnd="5dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:paddingStart="5dp"
-            android:paddingTop="5dp">
+            android:layout_marginTop="10dp"
+            android:layout_weight="0"
+            android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:text="會員帳號："
-                    android:textAlignment="viewStart"
-
-                    android:textSize="18sp" />
-
-                <EditText
-                    android:id="@+id/e1"
-                    android:layout_width="5dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-
-                    android:ems="10"
-                    android:hint="帳號需英文開頭"
-                    android:inputType="textPersonName" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:text="密碼："
-                    android:textAlignment="viewStart"
-                    android:textSize="18sp" />
-
-                <EditText
-                    android:id="@+id/e2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
-
-                    android:inputType="textPassword" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:text="確認密碼："
-                    android:textAlignment="viewStart"
-                    android:textSize="18sp" />
-
-                <AutoCompleteTextView
-                    android:id="@+id/com_pass"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textSize="18sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:background="@android:drawable/bottom_bar"
-                    app:srcCompat="@android:drawable/editbox_dropdown_dark_frame" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:text="姓名："
-                    android:textAlignment="viewStart"
-                    android:textSize="18sp" />
-
-                <EditText
-                    android:id="@+id/e4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:hint="請輸入真實姓名"
-                    android:inputType="textPersonName" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:layout_weight="0"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="學校："
-                    android:textAlignment="viewStart"
-                    android:textSize="18sp" />
-
-                <Spinner
-                    android:id="@+id/spr_sch"
-                    android:layout_width="240dp"
-                    android:layout_height="wrap_content" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:orientation="horizontal">
+                android:text="會員帳號："
+                android:textAlignment="viewStart"
+                android:textSize="18sp" />
 
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="科系："
-                    android:textSize="18sp" />
-
-                <Spinner
-                    android:id="@+id/spr_dep"
-                    android:layout_width="238dp"
-                    android:layout_height="wrap_content" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:text="學號："
-                    android:textSize="18sp" />
-
-                <EditText
-                    android:id="@+id/editText24"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:hint="依照學校學號格式"
-                    android:inputType="textPersonName" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="330dp"
-                android:layout_height="35dp"
-                android:layout_weight="0"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView12"
-                    android:layout_width="89dp"
-                    android:layout_height="wrap_content"
-                    android:text="性別："
-                    android:textSize="18sp" />
-
-                <RadioGroup
-                    android:id="@+id/sex"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/sex_man"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.22"
-                        android:text="男" />
-
-                    <RadioButton
-                        android:id="@+id/sex_woman"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="女" />
-
-                </RadioGroup>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <EditText
+                android:id="@+id/e1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView13"
-                    android:layout_width="84dp"
-                    android:layout_height="wrap_content"
-                    android:text="年齡："
-                    android:textSize="18sp" />
-
-                <Spinner
-                    android:id="@+id/spr_old"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:text="信箱："
-                    android:textSize="18sp" />
-
-                <EditText
-                    android:id="@+id/editText3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:hint="範例：abc@yuntech.edu.tw"
-                    android:inputType="textEmailAddress" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView15"
-                    android:layout_width="92dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:text="專長："
-                    android:textSize="18sp" />
-
-                <Spinner
-                    android:id="@+id/spr_spe"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView16"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:text="期望待遇："
-                    android:textSize="18sp" />
-
-                <EditText
-                    android:id="@+id/editText6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="62dp"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:inputType="textMultiLine" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0"
-                android:orientation="horizontal">
-
-                <CheckBox
-                    android:id="@+id/law"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="我同意，One_Stop條款"
-                    android:textColor="#0000ff" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/stulog_enter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.17"
-                    android:text="確認"
-                    android:textAlignment="center" />
-
-                <Button
-                    android:id="@+id/stulog_cancel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.19"
-                    android:text="取消" />
-            </LinearLayout>
+                android:layout_weight="1"
+                android:background="@drawable/tvstyle"
+                android:hint="帳號需英文開頭" />
 
         </LinearLayout>
-    </ScrollView>
 
-</android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="密碼："
+                android:textAlignment="viewStart"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/e2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tvstyle"
+                android:maxLength="20"
+                android:hint="最短6碼，最長20碼"
+                android:inputType="textPassword" />
+
+            <CheckBox
+                android:id="@+id/checkpass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="顯示密碼"
+                android:textColor="?attr/colorControlNormal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="確認密碼："
+                android:textAlignment="viewStart"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/e3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tvstyle"
+                android:hint="需與前面一致"
+                android:inputType="textPassword"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+
+            android:layout_weight="0"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:background="@color/common_google_signin_btn_text_light_focused"
+                app:srcCompat="@android:drawable/bottom_bar" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="姓名："
+                android:textAlignment="viewStart"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/e4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tvstyle"
+                android:hint="請輸入真實姓名"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textViewv6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="個人圖像："
+                android:textAlignment="viewStart"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/file"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_weight="1.07"
+                android:background="@drawable/tvstyle"
+                android:text="選取檔案路徑"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/put"
+                style="@android:style/Widget.Button"
+                android:layout_width="72dp"
+                android:layout_height="34dp"
+                android:onClick="load_picture"
+                android:text="上傳"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/button3"
+                style="@android:style/Widget.Button"
+                android:layout_width="72dp"
+                android:layout_height="34dp"
+                android:layout_weight="0"
+                android:onClick="take_picture"
+                android:text="拍照"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxHeight="100dp"
+                android:maxWidth="100dp"
+                android:adjustViewBounds="true"
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0"
+                android:text="學校："
+                android:textAlignment="viewStart"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/spr_sch"
+                android:layout_width="250dp"
+                android:layout_height="25dp"
+                android:background="@drawable/tv2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0"
+                android:text="科系："
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/spr_dep"
+                android:layout_width="250dp"
+                android:layout_height="25dp"
+                android:background="@drawable/tv2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="學號："
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/e5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tvstyle"
+                android:hint="依照學校學號格式"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="330dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sexx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="性別："
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:id="@+id/sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.32"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/sex_man"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.22"
+                    android:text="男" />
+
+                <RadioButton
+                    android:id="@+id/sex_woman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="女" />
+
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:orientation="horizontal"
+
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="年齡："
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/spr_old"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:background="@drawable/tv3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="信箱："
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/e6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tvstyle"
+                android:hint="範例：abc@yuntech.edu.tw"
+                android:inputType="textEmailAddress" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="手機："
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/e7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tvstyle"
+                android:hint="範例：0912345678"
+                android:inputType="number" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="專長："
+                android:textSize="18sp" />
+
+
+            <com.example.user.coin.Multiple_Spinner
+                android:id="@+id/spr_spe"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@drawable/tv2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="期望待遇："
+
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/e8"
+                android:layout_width="wrap_content"
+                android:layout_height="62dp"
+                android:layout_weight="1"
+                android:background="@drawable/tvstyle"
+                android:hint="可不填"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView163"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="曾任職務："
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/e9"
+                android:layout_width="wrap_content"
+                android:layout_height="62dp"
+                android:layout_weight="1.21"
+                android:background="@drawable/tvstyle"
+                android:hint="可不填"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/law"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="我同意，One_Stop條款"
+                android:textColor="#0000ff" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0">
+
+            <Button
+                android:id="@+id/stulog_cancel"
+                style="@android:style/Widget.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="48dp"
+                android:onClick="reWrite"
+                android:text="重填"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/stulog_enter"
+                style="@android:style/Widget.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="25dp"
+                android:layout_toStartOf="@+id/stulog_cancel"
+                android:onClick="onClick"
+                android:text="確認"
+                android:textAlignment="center" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textColor="#FF0000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

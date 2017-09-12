@@ -15,17 +15,22 @@
         completions."
     </string>
     <string name="title_activity_maps">Map</string>
+    <string name="law_onestop">One Stop條款
+    </string>
+
 
     <string-array name="school">
+        <item> -----請選擇-----</item>
         <item> 雲林科技大學</item>
         <item>虎尾科技大學</item>
-        <item>環球科技大</item>
+        <item>環球科技大學</item>
         <item>高中</item>
         <item>其他</item>
 
     </string-array>
 
     <string-array name="department">
+        <item> -----請選擇-----</item>
         <item>資訊管理系</item>
         <item>企業管理系</item>
         <item>工業工程設計系</item>
@@ -45,10 +50,11 @@
         <item>建築與室內設計系</item>
         <item>文化資產維護系</item>
         <item>應用外語系</item>
-
+        <item>其他</item>
     </string-array>
 
     <string-array name="old">
+        <item>請選擇</item>
         <item>15以下</item>
         <item>15</item>
         <item>16</item>
@@ -64,6 +70,7 @@
     </string-array>
 
     <string-array name="speciality">
+        <item> </item>
         <item> 基本繪圖軟體操作(EX:AI,photoshop)</item>
         <item>基本Office操作(EX:word,excel,powerpoint等)</item>
         <item>基本資料庫操作</item>
@@ -73,6 +80,32 @@
         <item>其他</item>
     </string-array>
 
+    <string-array name="case_item">
+        <item> -----請選擇-----</item>
+        <item>教育類</item>
+        <item>電腦類</item>
+        <item>服務類</item>
+        <item>清潔類</item>
+        <item>交通類</item>
+        <item>其他</item>
+    </string-array>
+
+
+    <string-array name="job_item">
+        <item>分類</item>
+        <item>教育</item>
+        <item>電腦</item>
+        <item>服務</item>
+        <item>清潔</item>
+        <item>交通</item>
+        <item>餐飲</item>
+        <item>其他</item>
+    </string-array>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_student_job_management">student_jobManagement</string>
 
 
 </resources>

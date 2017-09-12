@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/stu_g_bg1"
+    android:gravity="center_horizontal"
+    tools:context="com.example.user.coin.student_group_content">
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/tvstyle"
+        app:srcCompat="@drawable/stu_ic5" />
+
+    <LinearLayout
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button6"
+            style="@android:style/Widget.Button"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:onClick="group_board"
+            android:text="布告欄"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button7"
+            style="@android:style/Widget.Button"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:onClick="group_classview"
+            android:text="班表"
+            android:textSize="18sp" />
+    </LinearLayout>
+</LinearLayout>

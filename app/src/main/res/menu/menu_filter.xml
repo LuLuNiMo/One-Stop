@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/logout"
+        android:textAlignment="center"
+        android:title="登出"
+        app:showAsAction="always" />
+
+
+    <item
+        android:id="@+id/item_filter"
+        android:icon="@android:drawable/ic_menu_sort_by_size"
+        android:textAlignment="center"
+        android:title="篩選"
+        app:showAsAction="always">
+        <menu>
+
+
+            <item android:title="名稱"
+                android:id="@+id/name"
+                >
+                <menu>
+                    <item
+                        android:id="@+id/item1_1"
+                        android:textAlignment="center"
+                        android:title="筆畫遞增"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/item1_2"
+                        android:textAlignment="center"
+                        android:title="筆畫遞減"
+                        app:showAsAction="never" />
+                </menu>
+            </item>
+
+            <item android:title="性質"
+                android:id="@+id/nature"
+                >
+                <menu>
+                    <item
+                        android:id="@+id/item2_1"
+                        android:textAlignment="center"
+                        android:title="教育"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/item2_2"
+                        android:textAlignment="center"
+                        android:title="電腦"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/item2_3"
+                        android:textAlignment="center"
+                        android:title="服務"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/item2_4"
+                        android:textAlignment="center"
+                        android:title="清潔"
+                        app:showAsAction="never" />
+
+                    <item
+                        android:id="@+id/item2_5"
+                        android:textAlignment="center"
+                        android:title="交通"
+                        app:showAsAction="never" />
+
+                    <item
+                        android:id="@+id/item2_6"
+                        android:textAlignment="center"
+                        android:title="餐飲"
+                        app:showAsAction="never" />
+
+                    <item
+                        android:id="@+id/item2_7"
+                        android:textAlignment="center"
+                        android:title="其他"
+                        app:showAsAction="never" />
+                </menu>
+            </item>
+
+
+            <item android:title="星期"
+                        android:id="@+id/date"
+                        >
+                <menu>
+                    <item
+                                android:id="@+id/item3_1"
+                                android:textAlignment="center"
+                                android:title="星期一"
+                                app:showAsAction="never" />
+                    <item
+                                android:id="@+id/item3_2"
+                                android:textAlignment="center"
+                                android:title="星期二"
+                                app:showAsAction="never" />
+                    <item
+                                android:id="@+id/item3_3"
+                                android:textAlignment="center"
+                                android:title="星期三"
+                                app:showAsAction="never" />
+
+                    <item
+                                android:id="@+id/item3_4"
+                                android:textAlignment="center"
+                                android:title="星期四"
+                                app:showAsAction="never" />
+
+                    <item
+                                android:id="@+id/item3_5"
+                                android:textAlignment="center"
+                                android:title="星期五"
+                                app:showAsAction="never" />
+
+                    <item
+                                android:id="@+id/item3_6"
+                                android:textAlignment="center"
+                                android:title="星期六"
+                                app:showAsAction="never" />
+
+                    <item
+                                android:id="@+id/item3_7"
+                                android:textAlignment="center"
+                                android:title="星期日"
+                                app:showAsAction="never" />
+
+
+                </menu>
+            </item>
+
+
+            <item android:title="時間"
+                android:id="@+id/time"
+                >
+                <menu>
+                    <item
+                        android:id="@+id/item4_1"
+                        android:textAlignment="center"
+                        android:title="6:00 ~8:00"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/item4_2"
+                        android:textAlignment="center"
+                        android:title="8:00 ~ 12:00"
+                        app:showAsAction="never" />
+
+                    <item
+                        android:id="@+id/item4_3"
+                        android:textAlignment="center"
+                        android:title="12:00 ~ 15:00"
+                        app:showAsAction="never" />
+
+                    <item
+                        android:id="@+id/item4_4"
+                        android:textAlignment="center"
+                        android:title="15:00 ~ 18:00"
+                        app:showAsAction="never" />
+
+                    <item
+                        android:id="@+id/item4_5"
+                        android:textAlignment="center"
+                        android:title="18:00 ~ 21:00"
+                        app:showAsAction="never" />
+
+                    <item
+                        android:id="@+id/item4_6"
+                        android:textAlignment="center"
+                        android:title="21:00 ~ 0:00"
+                        app:showAsAction="never" />
+
+                    <item
+                        android:id="@+id/item4_7"
+                        android:textAlignment="center"
+                        android:title="0:00 ~ 6:00"
+                        app:showAsAction="never" />
+                </menu>
+            </item>
+
+
+            <item android:title="時薪"
+                android:id="@+id/ay"
+                >
+                <menu>
+                    <item
+                        android:id="@+id/item5_1"
+                        android:textAlignment="center"
+                        android:title="133"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/item5_2"
+                        android:textAlignment="center"
+                        android:title="133 ~150"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/item5_3"
+                        android:textAlignment="center"
+                        android:title="150 ~200"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/item5_4"
+                        android:textAlignment="center"
+                        android:title="200~300"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/item5_5"
+                        android:textAlignment="center"
+                        android:title="300以上"
+                        app:showAsAction="never" />
+
+                </menu>
+            </item>
+
+
+            <item android:title="條件"
+                android:id="@+id/condition"
+                >
+                <menu>
+                    <item
+                        android:id="@+id/item6"
+                        android:textAlignment="center"
+                        android:title="請自行輸入"
+                        app:showAsAction="never" />
+                </menu>
+            </item>
+
+
+
+
+            <item android:title="內容"
+                android:id="@+id/content"
+                >
+                <menu>
+                    <item
+                        android:id="@+id/item7"
+                        android:textAlignment="center"
+                        android:title="請自行輸入"
+                        app:showAsAction="never" />
+                </menu>
+            </item>
+
+
+            <item android:title="人數"
+                android:id="@+id/person"
+                >
+                <menu>
+                    <item
+                        android:id="@+id/item8_1"
+                        android:textAlignment="center"
+                        android:title="1人"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/item8_2"
+                        android:textAlignment="center"
+                        android:title="2人"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/item8_3"
+                        android:textAlignment="center"
+                        android:title="3人"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/item8_4"
+                        android:textAlignment="center"
+                        android:title="3~5人"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/item8_5"
+                        android:textAlignment="center"
+                        android:title="5~10人"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/item8_6"
+                        android:textAlignment="center"
+                        android:title="10人"
+                        app:showAsAction="never" />
+                </menu>
+            </item>
+
+
+            <item android:title="地區"
+
+                android:id="@+id/area"
+                >
+                <menu>
+                    <item
+                    android:id="@+id/item9_1"
+                    android:textAlignment="center"
+                    android:title="斗六"
+                    app:showAsAction="never" />
+                    <item
+                        android:id="@+id/item9_2"
+                        android:textAlignment="center"
+                        android:title="斗南"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/item9_3"
+                        android:textAlignment="center"
+                        android:title="古坑"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/item9_4"
+                        android:textAlignment="center"
+                        android:title="林內"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/item9_5"
+                        android:textAlignment="center"
+                        android:title="莿桐"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/item9_6"
+                        android:textAlignment="center"
+                        android:title="其他"
+                        app:showAsAction="never" />
+                </menu>
+            </item>
+
+
+        </menu>
+    </item>
+
+
+
+
+
+
+
+    <item
+        android:id="@+id/itemlogo"
+        android:icon="@drawable/logo"
+        android:textAlignment="center"
+        android:title="One Stop"
+        app:showAsAction="always" />
+
+
+
+
+</menu>

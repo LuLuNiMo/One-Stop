@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/stu_per_bg2"
+    tools:context="com.example.user.coin.student_resume_version">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <Button
+            android:id="@+id/resume_easy"
+            style="@android:style/Widget.Button"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:background="#000000"
+            android:onClick="onClick"
+            android:text="簡易版"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <Button
+            android:id="@+id/resume_complex"
+            style="@android:style/Widget.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#000000"
+            android:onClick="onClick"
+
+            android:text="完整版"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="125dp"
+                    android:layout_height="155dp"
+                    android:layout_marginRight="5dp"
+
+                    android:background="@drawable/tvstyle"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img"
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/stu_logo" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/textView49"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="姓名：" />
+
+                        <EditText
+                            android:id="@+id/name"
+                            android:layout_width="92dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/tvstyle"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:layout_weight="0.44" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/textView53"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="性別：" />
+
+                        <EditText
+                            android:id="@+id/sex"
+                            android:layout_width="33dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.10"
+                            android:background="@drawable/tvstyle"
+                            android:ems="10"
+                            android:inputType="textPersonName" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView354"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="年齡：" />
+
+                        <EditText
+                            android:id="@+id/age"
+                            android:layout_width="48dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/tvstyle"
+                            android:ems="10"
+                            android:inputType="number" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/textView524"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="系所：" />
+
+                        <EditText
+                            android:id="@+id/dep"
+                            android:layout_width="156dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/tvstyle"
+                            android:ems="10"
+                            android:inputType="textPersonName" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/textView541"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="電話：" />
+
+                <EditText
+                    android:id="@+id/phone"
+                    android:layout_width="179dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tvstyle"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/push"
+                    style="@android:style/Widget.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="picture_push"
+                    android:text="上傳個人真實照片"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView55"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="學校：" />
+
+                <EditText
+                    android:id="@+id/school"
+                    android:layout_width="198dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tvstyle"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView12355"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="學號：" />
+
+                <EditText
+                    android:id="@+id/id"
+                    android:layout_width="134dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tvstyle"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tex355"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="電子信箱：" />
+
+                <EditText
+                    android:id="@+id/e_mail"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tvstyle"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView5235"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="專長：" />
+
+                <EditText
+                    android:id="@+id/spec"
+                    android:layout_width="288dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tvstyle"
+                    android:ems="10"
+                    android:inputType="textMultiLine" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView525"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="曾任職務：" />
+
+                <EditText
+                    android:id="@+id/job"
+                    android:layout_width="259dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tvstyle"
+                    android:ems="10"
+                    android:inputType="textMultiLine" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView255"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="期望待遇：" />
+
+                <EditText
+                    android:id="@+id/wish"
+                    android:layout_width="258dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tvstyle"
+                    android:ems="10"
+                    android:inputType="textMultiLine" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@android:style/Widget.Button"
+                    android:text="修改資料"
+                    android:onClick="button_input"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

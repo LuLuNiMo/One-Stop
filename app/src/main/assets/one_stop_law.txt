@@ -1,0 +1,118 @@
+*註冊One_stop帳號須遵守以下事項
+
+       1.薪資須符合法定薪資。
+       2.
+       3.
+       4.
+       5.
+       6.
+       7.
+
+package com.example.user.coin;
+
+
+import android.graphics.Color;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.view.Menu;
+
+import android.widget.Button;
+
+
+public class student_case extends AppCompatActivity {
+    private static String TAG = "fragment";
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_student_case);
+        setTitle("CASE");
+
+
+    }
+
+
+    public void onClick(View view){     //換頁特效+frgment
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        Fragment fragment = manager.findFragmentById(R.id.fragment);
+        Button btn1 = (Button)findViewById(R.id.case_push);
+        Button btn2 = (Button)findViewById(R.id.case_pop);
+        case_1 fragmentA = new case_1();
+        case_2 fragmentB = new case_2();
+
+       switch (view.getId()){
+           case R.id.case_pop:
+               if (fragment == null) {
+                   transaction.add(R.id.fragment, fragmentA, TAG);
+               } else{
+                   transaction.replace(R.id.fragment, fragmentA, TAG);
+               }
+               btn2.setBackgroundColor(Color.argb(255,255,255,255));
+               btn2.setTextColor(Color.argb(255,0,0,0));
+               btn1.setBackgroundColor(Color.argb(255,0,0,0));
+               btn1.setTextColor(Color.argb(255,255,255,255));
+               break;
+
+           case R.id.case_push:
+               if (fragment == null) {
+                   transaction.add(R.id.fragment, fragmentB, TAG);
+               } else {
+                   transaction.replace(R.id.fragment, fragmentB, TAG);
+               }
+               btn1.setBackgroundColor(Color.argb(255,255,255,255));
+               btn1.setTextColor(Color.argb(255,0,0,0));
+               btn2.setBackgroundColor(Color.argb(255,0,0,0));
+               btn2.setTextColor(Color.argb(255,255,255,255));
+               break;
+        }
+        transaction.commit();
+
+    }
+
+
+
+
+
+
+
+ Fragment 通用(java)
+
+
+public class ???? extends Fragment {
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        super.onCreateView(inflater, container, savedInstanceState);
+        View view = inflater.inflate(R.layout.????(XML), container, false);
+        return view;
+    }
+}
+
+
+
+
+Button onclick event
+
+
+  btstu = (Button)findViewById(R.id.role_stu);
+        btstu.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent1 = new Intent();
+                intent1.setClass(login_role.this ,student_login.class);
+                startActivity(intent1);
+
+            }
+        });
+
+
+
+
+
+
+
