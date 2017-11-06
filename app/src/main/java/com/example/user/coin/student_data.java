@@ -20,14 +20,17 @@ public class student_data {
     private String wish;
     private String history;
     private byte[] photo;
+    private int score;
+
 
     public student_data(String account,String password,String name,String phone,byte[] image,String school,String department,String stu_id
             ,String sex,String age,String mail,String speciality,String wish,String history,byte[] photo){
-        this(0,account,password,name,phone,image,school,department,stu_id,sex,age,mail,speciality,wish,history,photo);
+        this(0,account,password,name,phone,image,school,department,stu_id,sex,age,mail,speciality,wish,history,photo,0);
     }
 
+
     public student_data(int id,String account,String password,String name,String phone,byte[] image,String school,String department,String stu_id
-            ,String sex,String age,String mail,String speciality,String wish,String history,byte[] photo){
+            ,String sex,String age,String mail,String speciality,String wish,String history,byte[] photo,int score){
         this.id = id;
         this.account = account;
         this.password = password;
@@ -44,6 +47,7 @@ public class student_data {
         this.wish = wish;
         this.history = history;
         this.photo = photo;
+        this.score = score;
     }
 
     public void setId(int id) {
@@ -174,10 +178,27 @@ public class student_data {
         return photo;
     }
 
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+
     public String getAll(){
         String ans = String.valueOf(id) + " , "+ account + " , "+ password + " , "+ name + " , "+ phone + " , "+ school + " , "+ department + " , "+ stu_id
                 + " , "+ sex + " , "+ String.valueOf(age) + " , "+ mail + " , "+ speciality + " , "+ wish + " , "+ history;
         return ans;
+    }
+
+
+    public String show_data(){
+        String ans = " 帳號："+ account +"\n"+"姓名：" + name + "\n "+ "手機號碼："+ phone + "\n "+"學校："+ school + "\n "+"系級：" + department
+                + " \n"+  " 性別： "+ sex + " \n "+  " 專題： "+ speciality + "\n"+ "經歷：" + history;
+        return ans;
+
     }
 
 }

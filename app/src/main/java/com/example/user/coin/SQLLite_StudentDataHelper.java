@@ -38,6 +38,7 @@ public class SQLLite_StudentDataHelper extends SQLiteOpenHelper{
     private static final String COL_w = "wish";
     private static final String COL_h = "history";
     private static final String COL_ph = "photo";
+    private static final String COL_sc = "score";
 
 
     //case column
@@ -50,6 +51,8 @@ public class SQLLite_StudentDataHelper extends SQLiteOpenHelper{
     private static final String COL_a = "area";
     private static final String COL_s = "state";
     private static final String COL_ca= "catch";
+    private static final String COL_rej= "reject";
+    private static final String COL_ass= "assign";
 
 
     //建立Table 學生基本資料
@@ -70,7 +73,8 @@ public class SQLLite_StudentDataHelper extends SQLiteOpenHelper{
                     COL_spe + " TEXT," +
                     COL_w + " TEXT," +
                     COL_h + " TEXT," +
-                    COL_ph + " BLOB);";
+                    COL_ph + " BLOB," +
+                    COL_sc + "  INTEGER);";
 
     //建立Table case基本資料
     private static final String TABLE_CREATE2 =
@@ -86,7 +90,9 @@ public class SQLLite_StudentDataHelper extends SQLiteOpenHelper{
                     COL_account + " TEXT," +
                     COL_a + " TEXT," +
                     COL_s + " TEXT," +
-                    COL_ca + " TEXT);";
+                    COL_ca + " TEXT," +
+                    COL_rej + " TEXT," +
+                    COL_ass + " TEXT);";
 
 
 
@@ -152,7 +158,7 @@ public class SQLLite_StudentDataHelper extends SQLiteOpenHelper{
         SQLiteDatabase db = getReadableDatabase();
         String[] columns = {
                 COL_id, COL_account, COL_pass, COL_name,COL_phone, COL_image ,COL_sch,COL_dep,COL_stuid
-                ,COL_sex,COL_age,COL_mail,COL_spe,COL_w,COL_h,COL_ph
+                ,COL_sex,COL_age,COL_mail,COL_spe,COL_w,COL_h,COL_ph,COL_sc
         };
         Cursor cursor = db.query(TABLE_NAME, columns, null, null, null, null,
                 null);
@@ -175,8 +181,9 @@ public class SQLLite_StudentDataHelper extends SQLiteOpenHelper{
             String w = cursor.getString(13);
             String h = cursor.getString(14);
             byte[] ph = cursor.getBlob(15);
+            int score = cursor.getInt(16);
 
-            student_data data = new student_data(id, acc,pass,name, phone,image,sch,department,stuid,sex,age,mail,spe,w,h,ph);
+            student_data data = new student_data(id, acc,pass,name, phone,image,sch,department,stuid,sex,age,mail,spe,w,h,ph,score);
             list.add(data);
         }
         cursor.close();
@@ -188,7 +195,7 @@ public class SQLLite_StudentDataHelper extends SQLiteOpenHelper{
 
         String[] columns = {
                 COL_id, COL_account, COL_pass, COL_name,COL_phone, COL_image ,COL_sch,COL_dep,COL_stuid
-                ,COL_sex,COL_age,COL_mail,COL_spe,COL_w,COL_h,COL_ph
+                ,COL_sex,COL_age,COL_mail,COL_spe,COL_w,COL_h,COL_ph,COL_sc
         };
         String selection = COL_account + " = ?;";
         String[] selectionArgs = {search};
@@ -212,7 +219,9 @@ public class SQLLite_StudentDataHelper extends SQLiteOpenHelper{
             String w = cursor.getString(13);
             String h = cursor.getString(14);
             byte[] photo = cursor.getBlob(15);
-            data = new student_data(id, acc,pass,name, phone,image,sch,department,stuid,sex,age,mail,spe,w,h,photo);
+            int score = cursor.getInt(16);
+
+            data = new student_data(id, acc,pass,name, phone,image,sch,department,stuid,sex,age,mail,spe,w,h,photo,score);
         }
         cursor.close();
         return data;
@@ -238,9 +247,22 @@ public class SQLLite_StudentDataHelper extends SQLiteOpenHelper{
         values.put(COL_h,data.getHistory());
         values.put(COL_ph,data.getPhoto());
 
+
         String whereClause = COL_account + " = ?;";
         String[] whereArgs = {data.getAccount()};
         return db.update(TABLE_NAME, values, whereClause, whereArgs);
+    }
+
+    public int update_data_score(String account,int score){
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COL_sc,score);
+
+        String whereClause = COL_account + " = ?;";
+        String[] whereArgs = {account};
+
+        return db.update(TABLE_NAME, values, whereClause, whereArgs);
+
     }
 
     public int deleteById_data(String id) {
@@ -270,6 +292,9 @@ public class SQLLite_StudentDataHelper extends SQLiteOpenHelper{
         values.put(COL_a,data.getArea());
         values.put(COL_s,data.getState());
         values.put(COL_ca,data.getAttach());
+        values.put(COL_rej,data.getReject());
+        values.put(COL_ass,data.getAssign());
+
 
         return db.insert(TABLE_NAME2, null, values);
     }
@@ -278,7 +303,7 @@ public class SQLLite_StudentDataHelper extends SQLiteOpenHelper{
         SQLiteDatabase db = getReadableDatabase();
         String[] columns = {
                 COL_id, COL_name, COL_n, COL_t,COL_p, COL_cond ,COL_num,COL_cont,COL_account
-                ,COL_a,COL_s,COL_ca
+                ,COL_a,COL_s,COL_ca,COL_rej,COL_ass
         };
         Cursor cursor = db.query(TABLE_NAME2, columns, null, null, null, null,
                 null);
@@ -297,9 +322,83 @@ public class SQLLite_StudentDataHelper extends SQLiteOpenHelper{
             String area = cursor.getString(9);
             String state = cursor.getString(10);
             String att = cursor.getString(11);
+            String rej = cursor.getString(12);
+            String ass = cursor.getString(13);
 
 
-           case_item data = new case_item(id,name,nature,time, pay,cond,num,cont,acc,area,state,att);
+           case_item data = new case_item(id,name,nature,time, pay,cond,num,cont,acc,area,state,att,rej,ass);
+            list.add(data);
+        }
+        cursor.close();
+        return list;
+    }
+
+    public List<case_item> findById_case(String account) {
+        SQLiteDatabase db = getReadableDatabase();
+        String[] columns = {
+                COL_id, COL_name, COL_n, COL_t,COL_p, COL_cond ,COL_num,COL_cont,COL_account
+                ,COL_a,COL_s,COL_ca,COL_rej,COL_ass
+        };
+
+        String selection = COL_account + " = ?;";
+        String[] selectionArgs = {account};
+        Cursor cursor = db.query(TABLE_NAME2, columns, selection, selectionArgs,
+                null, null, null);
+
+        List<case_item> list = new ArrayList<>();
+        while (cursor.moveToNext()) {
+            int id = cursor.getInt(0);
+            String name = cursor.getString(1);
+            String nature = cursor.getString(2);
+            String time = cursor.getString(3);
+            String pay = cursor.getString(4);
+            String cond = cursor.getString(5);
+            int num = cursor.getInt(6);
+            String cont = cursor.getString(7);
+            String acc = cursor.getString(8);
+            String area = cursor.getString(9);
+            String state = cursor.getString(10);
+            String att = cursor.getString(11);
+            String rej = cursor.getString(12);
+            String ass = cursor.getString(13);
+
+            case_item data = new case_item(id,name,nature,time, pay,cond,num,cont,acc,area,state,att,rej,ass);
+            list.add(data);
+        }
+        cursor.close();
+        return list;
+    }
+
+    public List<case_item> getAllCase_state(String sta) {
+        SQLiteDatabase db = getReadableDatabase();
+        String[] columns = {
+                COL_id, COL_name, COL_n, COL_t,COL_p, COL_cond ,COL_num,COL_cont,COL_account
+                ,COL_a,COL_s,COL_ca,COL_rej,COL_ass
+        };
+
+        String selection = COL_s + " = ?;";
+        String[] selectionArgs = {sta};
+        Cursor cursor = db.query(TABLE_NAME2, columns, selection, selectionArgs,
+                null, null, null);
+
+        List<case_item> list = new ArrayList<>();
+        while (cursor.moveToNext()) {
+            int id = cursor.getInt(0);
+            String name = cursor.getString(1);
+            String nature = cursor.getString(2);
+            String time = cursor.getString(3);
+            String pay = cursor.getString(4);
+            String cond = cursor.getString(5);
+            int num = cursor.getInt(6);
+            String cont = cursor.getString(7);
+            String acc = cursor.getString(8);
+            String area = cursor.getString(9);
+            String state = cursor.getString(10);
+            String att = cursor.getString(11);
+            String rej = cursor.getString(12);
+            String ass = cursor.getString(13);
+
+            case_item data = new case_item(id,name,nature,time, pay,cond,num,cont,acc,area,state,att,rej,ass);
             list.add(data);
         }
         cursor.close();
@@ -311,7 +410,7 @@ public class SQLLite_StudentDataHelper extends SQLiteOpenHelper{
 
         String[] columns = {
                 COL_id, COL_name, COL_n, COL_t,COL_p, COL_cond ,COL_num,COL_cont,COL_account
-                ,COL_a,COL_s,COL_ca
+                ,COL_a,COL_s,COL_ca,COL_rej,COL_ass
         };
         String selection = COL_id + " = ?;";
         String[] selectionArgs = {String.valueOf(id)};
@@ -331,9 +430,10 @@ public class SQLLite_StudentDataHelper extends SQLiteOpenHelper{
             String area = cursor.getString(9);
             String state = cursor.getString(10);
             String att = cursor.getString(11);
+            String rej = cursor.getString(12);
+            String ass = cursor.getString(13);
 
-
-            data = new case_item(id,name,nature,time, pay,cond,num,cont,acc,area,state,att);
+           data = new case_item(id,name,nature,time, pay,cond,num,cont,acc,area,state,att,rej,ass);
         }
         cursor.close();
         return data;
@@ -354,6 +454,8 @@ public class SQLLite_StudentDataHelper extends SQLiteOpenHelper{
         values.put(COL_a,data.getArea());
         values.put(COL_s,data.getState());
         values.put(COL_ca,data.getAttach());
+        values.put(COL_rej,data.getReject());
+        values.put(COL_ass,data.getAssign());
 
 
         String whereClause = COL_id + " = ?;";

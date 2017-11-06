@@ -204,7 +204,7 @@ public class case_1 extends Fragment {
         String sta = "未解決";
         String att = "";
 
-        list = new case_item(na,nat,tt,pp,cond,n,cont,account,ar,sta,att);
+        list = new case_item(na,nat,tt,pp,cond,n,cont,account,ar,sta,att,"","");
 
 
         return list;

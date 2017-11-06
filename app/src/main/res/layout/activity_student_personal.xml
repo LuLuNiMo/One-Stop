@@ -13,7 +13,7 @@
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             android:layout_width="150dp"
             android:layout_height="120dp"
             android:background="@drawable/tvstyle"
@@ -22,7 +22,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="60dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal">
 
@@ -39,7 +39,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal">
 
@@ -50,6 +50,24 @@
             android:layout_height="wrap_content"
             android:onClick="resume_mge"
             android:text="履歷管理"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button24"
+            style="@android:style/Widget.Button"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="message_record"
+            android:text="通訊紀錄"
             android:textSize="18sp" />
     </LinearLayout>
 

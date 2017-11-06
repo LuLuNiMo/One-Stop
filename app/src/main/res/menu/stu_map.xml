@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="schemas.android.com/tools"
+    tools:context="com.gallery.MainActivity"
+    >
+
+
+    <item
+        android:id="@+id/logout"
+        android:textAlignment="center"
+        android:title="登出"
+        app:showAsAction="always" />
+
+
+
+    <item
+        android:id="@+id/item_filter"
+        android:icon="@android:drawable/ic_dialog_dialer"
+        android:textAlignment="center"
+        android:title="功能"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/location"
+                android:title="我的位置"
+                app:showAsAction="ifRoom" />
+
+            <item android:id="@+id/satellite" android:title="顯示衛星圖"
+                android:checkable="true" />
+            <item android:id="@+id/traffic" android:title="顯示交通狀況"
+                android:checkable="true" />
+
+            <item android:id="@+id/setGPS" android:title="設定定位服務" />
+            <item android:id="@+id/about" android:title="關於 我的地圖" />
+
+
+        </menu>
+    </item>
+
+
+
+
+
+    <item
+        android:id="@+id/logo"
+        android:icon="@drawable/logo"
+        android:textAlignment="center"
+        android:title="One Stop"
+        app:showAsAction="always" />
+
+
+
+
+
+</menu>

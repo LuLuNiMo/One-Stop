@@ -1,14 +1,11 @@
 package com.example.user.coin;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -84,8 +81,6 @@ public class case_2 extends Fragment implements SearchView.OnQueryTextListener{ 
             message.setText(ex.getMessage());
         }
 
-
-
         search.setIconifiedByDefault(false);
         search.setSubmitButtonEnabled(true);
         search.setOnQueryTextListener(this);
@@ -144,7 +139,7 @@ public class case_2 extends Fragment implements SearchView.OnQueryTextListener{ 
     //show all case_item
     private List<case_item> case_item_all(){
         List<case_item> caseList;
-        caseList = helper.getAllCase();
+        caseList = helper.getAllCase_state("未解決");
         return caseList;
     }
 
@@ -165,11 +160,6 @@ public class case_2 extends Fragment implements SearchView.OnQueryTextListener{ 
         //產生資料區
         public CaseAdapter(Context context){
             layoutInflater = LayoutInflater.from(context);
-
-
-
-
-
         }
 
 
@@ -209,10 +199,6 @@ public class case_2 extends Fragment implements SearchView.OnQueryTextListener{ 
                     .findViewById(R.id.title);
             titleId.setText(String.valueOf(caseitem.getName()));
 
-            TextView naId = (TextView) convertView
-                    .findViewById(R.id.na);
-            naId.setText(String.valueOf(caseitem.getNature()));
-
             TextView tmId = (TextView) convertView
                     .findViewById(R.id.time);
             tmId.setText(String.valueOf(caseitem.getTime()));
@@ -225,38 +211,10 @@ public class case_2 extends Fragment implements SearchView.OnQueryTextListener{ 
                     .findViewById(R.id.cond);
             condId.setText(String.valueOf(caseitem.getCondition()));
 
-            TextView numId = (TextView) convertView
-                    .findViewById(R.id.num);
-            numId.setText(String.valueOf(caseitem.getNum()));
 
             TextView contId = (TextView) convertView
                     .findViewById(R.id.cont);
             contId.setText(String.valueOf(caseitem.getContent()));
-
-            TextView accId = (TextView) convertView
-                    .findViewById(R.id.id);
-            String sexId;
-
-            String nn = data.getName().substring(0,1);
-            if(data.getSex().equals("女")){
-                sexId="小姐";
-            }else{
-                sexId="先生";
-            }
-            accId.setText(String.valueOf(nn + sexId));
-            TextView areaId = (TextView) convertView
-                    .findViewById(R.id.area);
-            areaId.setText(String.valueOf(caseitem.getArea()));
-
-            //聯絡方式
-            Button conect =(Button) convertView
-                    .findViewById(R.id.connect_me);
-            conect.setOnClickListener(new View.OnClickListener(){
-                @Override
-                public void onClick(View v){
-                    message.setText("");
-                    new_AlertDialog(data);
-                }});
 
 
             //接case method
@@ -265,98 +223,18 @@ public class case_2 extends Fragment implements SearchView.OnQueryTextListener{ 
             catch_you.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    message.setText("");
-                    if(catch_case(caseitem) != -1){
-                        Toast.makeText(getContext(),"CASE Successful，請等候對方回應",Toast.LENGTH_SHORT).show();
-                    }else{
-                        message.setText("CASE Fail");
-                    }
+                    Bundle bundle = new Bundle();
+                    Intent intent = new Intent();
+                    bundle.putInt("case_no",caseitem.getId());
+                    intent.setClass(getActivity(),student_case_content.class);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
                 }
             });
-
             return convertView;
         }
 
     }
-
-  //接CASE
-    public int catch_case(case_item item){
-       int i = -1;
-        try{
-            if(test_id(item.getAccount(),item.getAttach())){
-                item.setAttach(account + " ,");
-                if(helper == null){
-                    helper = new SQLLite_StudentDataHelper(getActivity());
-                }
-                i =helper.update_case(item);
-                helper.close();
-            }
-        }catch(Exception ex){
-            message.setText(ex.getMessage());
-        }
-        return i;
-    }
-
-    //try 是否CASE自己的CASE或重複
-    public boolean test_id(String text,String attach){
-      boolean t = true;
-       if(text.trim().equals(account)){
-           t = false;
-           Toast.makeText(getActivity(),"不能CASE自己的CASE",Toast.LENGTH_SHORT).show();
-       }else if(!attach.trim().equals("")){
-           String[] arr = attach.split(",");
-           for(int i=0;i<arr.length;i++){
-               if(arr[i].trim().equals(account)){
-                   t = false;
-                   Toast.makeText(getActivity(),"你已經CASE過該CASE",Toast.LENGTH_SHORT).show();
-               }
-           }
-       }
-        return t;
-    }
-
-    //產生連絡對話框
-    public void new_AlertDialog(final student_data data){
-        AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
-        dialog.setTitle("聯絡我");
-        dialog.setMessage("請選擇以下其中一種聯絡方法");
-        dialog.setNegativeButton("電話",new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface arg0, int arg1) {
-                // TODO Auto-generated method stub
-                try{
-                    String phone = data.getPhone();
-                    Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:"
-                            + phone));
-                    startActivity(intent);
-                }catch(Exception ex){
-                    Toast.makeText(getContext(),ex.getMessage(),Toast.LENGTH_SHORT).show();
-                }
-            }
-
-        });
-        dialog.setNeutralButton
-        ("即時通訊",new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface arg0, int arg1) {
-                // TODO Auto-generated method stub
-                Toast.makeText(getContext(),"請稍候......",Toast.LENGTH_SHORT).show();
-
-            }
-
-        });
-        dialog.setPositiveButton
-        ("視訊",new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface arg0, int arg1) {
-                // TODO Auto-generated method stub
-                Toast.makeText(getContext(),"請稍候......",Toast.LENGTH_SHORT).show();
-            }
-
-        });
-        dialog.show();
-    }
-
 
 
 

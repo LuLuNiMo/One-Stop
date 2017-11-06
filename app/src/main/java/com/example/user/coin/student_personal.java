@@ -32,8 +32,11 @@ public class student_personal extends AppCompatActivity {
     }
 
 
-
-
+    public void message_record(View v){
+        Intent intent = new Intent();
+        intent.setClass(student_personal.this ,student_message_record.class);
+        startActivity(intent);
+    }
 
 
 

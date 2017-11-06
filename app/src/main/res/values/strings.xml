@@ -102,6 +102,35 @@
         <item>其他</item>
     </string-array>
 
+    <string-array name="stu_map_stance">
+        <item> -----請選擇-----</item>
+        <item>50公尺</item>
+        <item>100公尺</item>
+        <item>200公尺</item>
+        <item>400公尺</item>
+        <item>600公尺</item>
+        <item>800公尺</item>
+        <item>1公里</item>
+        <item>2公里</item>
+        <item>3公里</item>
+        <item>3公里以上</item>
+    </string-array>
+
+    <string-array name="stu_map_range">
+        <item> -----請選擇-----</item>
+        <item>補習班</item>
+        <item>飲料店</item>
+        <item>小吃店</item>
+        <item>行政業務</item>
+        <item>斗六</item>
+        <item>斗南</item>
+        <item>莿桐</item>
+        <item>林內</item>
+        <item>虎尾</item>
+        <item>雲林其他地區</item>
+        <item>雲林以外縣市</item>
+    </string-array>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

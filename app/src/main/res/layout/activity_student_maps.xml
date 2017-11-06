@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
+    android:layout_margin="5dp"
     android:orientation="vertical"
     tools:context="com.example.user.coin.student_maps">
 
@@ -45,13 +45,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginRight="10dp"
-            android:text="特定範圍"
+            android:text="依性質區分："
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/spr2"
-            android:layout_width="228dp"
+            android:layout_width="175dp"
             android:layout_height="34dp"
             android:layout_gravity="center"
             android:background="@drawable/tv2" />
@@ -59,19 +59,56 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/maps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:weightSum="1">
+
+        <AutoCompleteTextView
+            android:id="@+id/tt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.93"
+            android:background="@drawable/tvstyle" />
+
+        <Button
+            android:id="@+id/button5"
+            style="@android:style/Widget.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="onClick"
+            android:text="搜尋店家"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textSize="12sp" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
         android:background="@drawable/tvstyle"
         android:orientation="horizontal">
 
-        <com.google.android.gms.maps.MapView
-            android:id="@+id/mapView"
-            android:layout_margin="1dp"
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+
+            />
     </LinearLayout>
 
 </LinearLayout>

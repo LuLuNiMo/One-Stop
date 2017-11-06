@@ -17,13 +17,14 @@ public class case_item{
     private String area;
     private String state;
     private String attach;
-
+    private String reject;
+    private String assign;
 
 
 
     public case_item(int id,String name, String nature, String time,String pay,String condition,int num,
                      String content,String account,String area, String state,
-                             String attach){
+                             String attach,String reject,String assign){
 
         this.id = id;
         this.name = name;
@@ -37,12 +38,15 @@ public class case_item{
         this.area = area;
         this.state = state;
         this.attach = attach;
+        this.reject = reject;
+        this.assign = assign;
+
     }
 
     public case_item( String name, String nature, String time,String pay,String condition,
                      int num,String content,String account,String area,String state,
-                     String attach){
-        this(0,name,nature,time,pay,condition,num,content,account,area,state,attach);
+                     String attach,String reject,String assign){
+        this(0,name,nature,time,pay,condition,num,content,account,area,state,attach,reject,assign);
     }
 
     public void setId(int id){
@@ -61,7 +65,7 @@ public class case_item{
         return account;
     }
 
-    public void seArea(String area){
+    public void setArea(String area){
         this.area = area;
     }
 
@@ -133,6 +137,14 @@ public class case_item{
         return state;
     }
 
+    public void setReject(String reject){
+        this.reject = reject;
+    }
+
+    public String getReject(){
+        return reject;
+    }
+
     public void setAttach(String attach){
         this.attach = attach;
     }
@@ -141,10 +153,24 @@ public class case_item{
         return attach;
     }
 
+    public void setAssign(String assign){
+        this.assign =assign;
+    }
+
+    public String getAssign(){
+        return assign;
+    }
+
+    public String getNumber(){
+        return attach + "," +reject + "," +assign;
+    }
+
+
     public String getAll(){
         return  String.valueOf(id)+ ",  " +name+ ",  " +nature+ ",  " +time+ ",  " +pay+ ",  " +condition+ ",  " +String.valueOf(num)+ ",  " +
-         content+ ",  " +account+ ",  " +area+ ",  " + state + ",  " + attach;
+         content+ ",  " +account+ ",  " +area+ ",  " + state + ",  " + attach+ ",  " + reject + ",  " +assign;
     }
+
 
     public String getSearch(){
         return   name+ ",  " +nature+ ",  " +time+ ",  " +pay+ ",  " +condition+ ",  " +String.valueOf(num)+ ",  " +

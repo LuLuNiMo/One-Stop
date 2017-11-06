@@ -11,14 +11,13 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality. 
     -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
@@ -128,21 +127,44 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".all_jobs" />
         </activity>
-
         <activity android:name=".student_case_manage">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".student_case" />
-
         </activity>
-
         <activity android:name=".student_maps">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".student_menu" />
         </activity>
+        <activity android:name=".student_case_content">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".student_case" />
+        </activity>
+        <activity android:name=".student_case_myCase">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".student_case_manage" />
+        </activity>
+        <activity android:name=".student_case_catchCase">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".student_case_manage" />
+        </activity>
 
+        <activity android:name=".student_message_record">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".student_personal" />
 
+       </activity>>
+        <activity android:name=".message_content">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".student_message_record" />
+
+        </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
